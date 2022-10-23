@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0a0a0a;
+}
+.container {
+  width: 80%;
+  height: 90vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.diwali-text {
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-weight: 900;
+  font-size: 4rem;
+  animation: text-animation 7s alternate infinite;
+  padding: 80px;
+  line-height: 1.5;
+  color: #a0a07fc9;
+}
+@keyframes text-animation {
+  0%,
+  100% {
+    text-shadow: 0 0 30px rgb(246, 82, 82);
+  }
+  25% {
+    text-shadow: 0 0 30px rgb(248, 239, 139);
+  }
+  50% {
+    text-shadow: 0 0 30px rgb(48, 219, 48);
+  }
+  75% {
+    text-shadow: 0 0 30px rgb(84, 242, 242);
+  }
+}
+.diya {
+  height: 150px;
+  width: 300px;
+  background-color: #f7cd25;
+  border-radius: 0 0 150px 150px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  overflow: hidden;
+}
+.oil {
+  width: 300px;
+  height: 60px;
+  background-color: #fd500a;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 170px;
+}
+.flame {
+  content: "";
+  width: 75px;
+  height: 150px;
+  background-color: rgb(246, 230, 62);
+  position: absolute;
+  top: -90px;
+  left: 90px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border: 2px solid #fd500a;
+  animation: flame-animation 7s infinite alternate-reverse;
+  transform-origin: bottom right;
+  transform: rotate3d(1, 1, 1, 30deg);
+  z-index: 1;
+}
+@keyframes flame-animation {
+  0% {
+    transform: rotate(-5deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(20deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-5deg) scale(1);
+  }
+}
+
+.border-top,
+.border-bottom {
+  position: absolute;
+  height: 60px;
+  width: 320px;
+  border: none;
+  border-bottom: 8px solid #63b912;
+  border-radius: 50%;
+  left: -10px;
+}
+.border-bottom {
+  top: 60px;
+}
+.border-dot {
+  height: 60px;
+  width: 320px;
+  border: none;
+  border-bottom: 10px dotted #fd500a;
+  position: absolute;
+  border-radius: 50%;
+  top: 30px;
+  left: -10px;
+}
